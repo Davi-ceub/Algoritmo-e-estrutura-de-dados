@@ -1,37 +1,24 @@
-package aula4_2;
+package aula5;
 
-import java.util.ArrayList;
+import java.util.HashMap;
 
 public class Principal {
 
 	public static void main(String[] args) {
-
-		ArrayList<String> carros = new ArrayList<String>();
-		carros.add("Pulse");
-		carros.add("Honda Fit");
-		carros.add("147");
-		carros.add("Opala");
-		carros.add("Byd");
-
-		System.out.println(carros);
-
-		carros.remove(2);
-
-		System.out.println(carros);
-
-		carros.remove("Byd");
-
-		System.out.println(carros);
-
-		// acessando uma informação específica
-		System.out.println(carros.get(1));
-
-		carros.set(0, "Abarth");
-
-		System.out.println(carros);
-
-		for (String carro : carros) {
-			System.out.println(carro);
-		}
+			
+		HashMap<Integer, String> alunos = new HashMap<Integer, String>();
+		alunos.put(123456, "Molina");
+		alunos.put(654321, "José");
+		alunos.put(554466,"Maria");
+		System.out.println(alunos);
+		System.out.println(alunos.get(654321));
+		// alteração de valor
+		alunos.put(654321, "João");
+		System.out.println(alunos);
+		//removendo valor
+		alunos.remove(654321);
+		System.out.println(alunos);
+		alunos.size();
+		System.out.println(alunos.size());
 	}
 }
